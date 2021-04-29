@@ -1,10 +1,10 @@
 export default async (req, res) => {
   const { id } = req.query
-  await fetch(`http://localhost:5000/api/checkouts/${id}`, {
+  await fetch(`${process.env.apiBaseUrl}/api/checkouts/${id}`, {
     method: "GET",
     headers: {
-      "X-ACCOUNT-ID": process.env.RECURRENTE_PUBLIC_KEY,
-      "X-API-KEY": process.env.RECURRENTE_SECRET_KEY,
+      "X-PUBLIC-KEY": process.env.RECURRENTE_PUBLIC_KEY,
+      "X-SECRET-KEY": process.env.RECURRENTE_SECRET_KEY,
     },
   }).then(function (result) {
     return result.json()
