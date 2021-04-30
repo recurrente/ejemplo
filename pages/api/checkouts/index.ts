@@ -7,9 +7,9 @@ export default async (req, res) => {
       "Content-Type": "application/json",
     }, body: JSON.stringify({
       checkout: {
-        prices: [req.body.price_id],
-        success_url: req.body.success_url,
-        cancel_url: req.body.cancel_url
+        prices: req.body.prices,
+        success_url: "http://localhost:3000/success",
+        cancel_url: "http://localhost:3000/cancel"
       }
     })
   }).then(function (result) {

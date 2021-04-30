@@ -7,15 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-function rcrntCheckout(price_id=null) {
+function rcrntCheckout(price_id) {
   fetch('/api/checkouts', {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     }, body: JSON.stringify({
-      price_id: price_id,
-      success_url: `${window.origin}/success`,
-      cancel_url: `${window.origin}/cancel`,
+      prices: [price_id],
     })
   }).then(function (result) {
     return result.json();
