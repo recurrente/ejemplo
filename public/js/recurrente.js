@@ -16,8 +16,6 @@ class Recurrente {
         "Content-Type": "application/json",
         "X-PUBLIC-KEY": this.publicKey,
       }, body: JSON.stringify({
-        // success_url: this._successUrl(button),
-        // cancel_url: this._cancelUrl(button),
         items: [{
           price_id: this._priceId(button),
           quantity: this._quantity(button),
@@ -33,14 +31,6 @@ class Recurrente {
       }
     })
   }
-
-  // _successUrl(button) {
-  //   return button.getAttribute("data-recurrente-success-url") || this.successUrl
-  // }
-
-  // _cancelUrl(button) {
-  //   return button.getAttribute("data-recurrente-cancel-url") || this.cancelUrl
-  // }
 
   _priceId(button) {
     return button.getAttribute("data-recurrente-price-id") || this.priceId
