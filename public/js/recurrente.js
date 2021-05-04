@@ -9,6 +9,7 @@ class Recurrente {
   }
 
   createCheckout(button) {
+    const outerThis = this
     fetch(`http://localhost:3001/api/checkouts`, {
       method: "POST",
       headers: {
@@ -26,7 +27,7 @@ class Recurrente {
       return result.json();
     }).then(function (data) {
       if (data.checkout_url) {
-        redirectToCheckout(data.checkout_url)
+        outerThis.redirectToCheckout(data.checkout_url)
       } else {
         console.log(data)
       }
@@ -54,17 +55,16 @@ class Recurrente {
   }
 
   setup() {
-    var outerThis = this
-    var submitButtons = Array.from(document.querySelectorAll('[data-recurrente-button]'))
+    const outerThis = this
+    const submitButtons = Array.from(document.querySelectorAll("[data-recurrente-button]"))
     if (submitButtons.length > 0) {
       submitButtons.map((submitButton) => {
-        submitButton.addEventListener('click', function () {
+        submitButton.addEventListener("click", function () {
           outerThis.createCheckout(submitButton)
         })
       })
     }
   }
-
 }
 
 window.Recurrente = Recurrente
