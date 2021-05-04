@@ -1,6 +1,14 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
 
+
 export default function Home() {
+  useEffect(() => {
+    const recurrente = window.Recurrente.init("pk_test_9bqhxRrTK6ktjAkfxBCDtkuPbhhJzUgcSzWaBR0LbibsJQG5eLCdBvOfj")
+    recurrente.successUrl = "http://localhost:3000/success"
+    recurrente.cancelUrl = "http://localhost:3000/cancel"
+  }, []);
+
   return (
     <div className="bg-gray-50 flex justify-center items-center text-center min-h-screen py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <Head>
@@ -19,9 +27,9 @@ export default function Home() {
             <a
               href="#"
               className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
-              data-recurrente-key="pk_test_naKXLC6Simkz7lF2ABmYKWAbj4QQ901GYH3n7g3hM1CJ01Uzy566WD2eh"
+              data-recurrente-button
+              data-recurrente-price-id="1c8e3c3e"
               data-recurrente-quantity="2"
-              data-recurrente-price="1c8e3c3e"
             >
               Probar Checkout
           </a>
