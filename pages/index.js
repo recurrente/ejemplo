@@ -4,9 +4,7 @@ import Head from 'next/head'
 
 export default function Home() {
   useEffect(() => {
-    const recurrente = window.Recurrente.init("pk_test_9bqhxRrTK6ktjAkfxBCDtkuPbhhJzUgcSzWaBR0LbibsJQG5eLCdBvOfj")
-    recurrente.successUrl = "http://localhost:3000/success"
-    recurrente.cancelUrl = "http://localhost:3000/cancel"
+    window.Recurrente.init("pk_test_9bqhxRrTK6ktjAkfxBCDtkuPbhhJzUgcSzWaBR0LbibsJQG5eLCdBvOfj")
   }, []);
 
   return (

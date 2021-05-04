@@ -9,7 +9,7 @@ class Recurrente {
   }
 
   createCheckout(button) {
-    const outerThis = this
+    var outerThis = this
     fetch(`http://localhost:3001/api/checkouts`, {
       method: "POST",
       headers: {
@@ -45,8 +45,8 @@ class Recurrente {
   }
 
   setup() {
-    const outerThis = this
-    const submitButtons = Array.from(document.querySelectorAll("[data-recurrente-button]"))
+    var outerThis = this
+    var submitButtons = Array.from(document.querySelectorAll("[data-recurrente-button]"))
     if (submitButtons.length > 0) {
       submitButtons.map((submitButton) => {
         submitButton.addEventListener("click", function () {
