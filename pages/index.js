@@ -12,7 +12,7 @@ export default function Home() {
       <Head>
         <title>Recurrente Sample</title>
         <link rel="icon" href="/logo.png" />
-        <script src="../js/recurrente.js"></script>
+        <script type="module" src="https://unpkg.com/recurrente@latest"></script>
       </Head>
 
       <div className="">
