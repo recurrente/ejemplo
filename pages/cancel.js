@@ -6,7 +6,6 @@ export default function Home() {
       <Head>
         <title>Recurrente Sample</title>
         <link rel="icon" href="/logo.png" />
-        <script src="../js/recurrente.js"></script>
       </Head>
 
       <div className="">
