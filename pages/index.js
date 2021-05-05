@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 export default function Home() {
   useEffect(() => {
-    window.Recurrente.init("pk_test_9bqhxRrTK6ktjAkfxBCDtkuPbhhJzUgcSzWaBR0LbibsJQG5eLCdBvOfj")
+    window.Recurrente.init("pk_test_xQrJ1wNb7OEi7oicPAhnXMFPGqgnWxtcTityt2BXOwZKQdgVRsuTzYQUm")
   }, []);
 
   return (
@@ -26,8 +26,8 @@ export default function Home() {
               href="#"
               className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
               data-recurrente-button
-              data-recurrente-price-id="1c8e3c3e"
-              data-recurrente-quantity="2"
+              data-recurrente-price-id="pr_4bfnflae"
+              data-recurrente-quantity="1"
             >
               Probar Checkout
           </a>
