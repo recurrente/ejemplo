@@ -1,5 +1,5 @@
 module.exports = {
   env: {
-    apiBaseUrl: "http://localhost:3001",
+    apiBaseUrl: "https://app.recurrente.com",
   },
 }
